@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Gemini Helper",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Biến Gemini trở thành trợ thủ đắc lực trong công việc",
     "permissions": [
       "activeTab",
