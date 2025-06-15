@@ -1,0 +1,115 @@
+/* styles.css */
+
+/* Popup hành động nhỏ khi bôi đen */
+#gemini-text-helper-action-popup {
+    position: fixed;
+    /* Thay đổi màu nền của popup để tăng độ tương phản */
+    background-color: #303134; /* Một màu xám tối */
+    border: 1px solid #5F6368; /* Viền tối hơn một chút */
+    border-radius: 6px; /* Bo tròn hơn một chút */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3); /* Đổ bóng rõ hơn */
+    padding: 10px; /* Tăng padding một chút */
+    z-index: 2147483647;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    display: flex;
+    gap: 10px; /* Tăng khoảng cách giữa các nút */
+}
+
+#gemini-text-helper-action-popup button {
+    padding: 7px 12px; /* Tăng padding cho nút */
+    border: 1px solid #8AB4F8; /* Viền nút màu xanh nhạt (Google style) */
+    background-color: #3C4043; /* Nền nút xám tối, hơi khác nền popup */
+    color: #E8EAED; /* Màu chữ trắng ngà, dễ đọc trên nền tối */
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500; /* Chữ đậm hơn một chút */
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+#gemini-text-helper-action-popup button:hover {
+    background-color: #4E5255; /* Nền nút khi hover tối hơn chút */
+    border-color: #AECBFA; /* Viền nút khi hover sáng hơn */
+    color: #FFFFFF; /* Chữ trắng hơn khi hover */
+}
+
+/* Popup hiển thị kết quả (Không thay đổi phần này trừ khi bạn yêu cầu) */
+#gemini-text-helper-result-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    padding: 20px;
+    z-index: 2147483647;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+#gemini-text-helper-result-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#gemini-text-helper-result-popup-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+#gemini-text-helper-result-popup-close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #777;
+    padding: 0 5px;
+}
+#gemini-text-helper-result-popup-close-btn:hover {
+    color: #333;
+}
+
+#gemini-text-helper-result-popup-content {
+    overflow-y: auto;
+    line-height: 1.6;
+    font-size: 15px;
+    color: #444;
+    white-space: pre-wrap;
+    flex-grow: 1;
+}
+
+#gemini-text-helper-result-popup-content.loading::after {
+    content: 'Đang tải...';
+    display: block;
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    padding: 20px;
+}
+
+.gth-spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: gth-spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes gth-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
